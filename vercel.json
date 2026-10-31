@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/api/index" },
+    { "src": "/api/avatar", "dest": "/api/avatar" },
+    { "src": "/api/avatar/(.*)", "dest": "/api/avatar?email=$1" }
+  ]
+}

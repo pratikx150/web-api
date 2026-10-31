@@ -1,0 +1,13 @@
+{
+  "name": "web-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vercel-hostable API that returns a Gravatar profile image URL from any email address.",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node api/index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

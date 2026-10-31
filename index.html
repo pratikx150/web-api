@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Avatar API</title>
+    <style>
+      :root {
+        --bg: #020817;
+        --panel: #0f172a;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #020817, #111827 45%, #0f172a);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: min(900px, calc(100% - 24px));
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 30px 60px rgba(2, 8, 23, 0.7);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      p, li {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      code, pre {
+        font-family: Consolas, monospace;
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 10px;
+      }
+
+      pre {
+        padding: 16px;
+        overflow: auto;
+        color: #dbeafe;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.14);
+        color: var(--accent);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="badge">Vercel API</div>
+      <h1>Email Avatar API</h1>
+      <p>Use the endpoint below to get the real profile photo for any email address in JSON format.</p>
+
+      <pre>https://your-project-name.vercel.app/api/avatar?email=hello@example.com</pre>
+
+      <p>Example response:</p>
+      <pre>{
+  "success": true,
+  "email": "hello@example.com",
+  "avatar": "https://www.gravatar.com/avatar/....?s=512&d=mp&r=g",
+  "avatar_url": "https://www.gravatar.com/avatar/....?s=512&d=mp&r=g",
+  "pfp": "https://www.gravatar.com/avatar/....?s=512&d=mp&r=g",
+  "profile_picture": "https://www.gravatar.com/avatar/....?s=512&d=mp&r=g",
+  "provider": "gravatar"
+}</pre>
+    </main>
+  </body>
+</html>
