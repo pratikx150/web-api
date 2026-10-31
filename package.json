@@ -8,6 +8,6 @@
     "dev": "node api/index.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "26.x"
   }
 }
